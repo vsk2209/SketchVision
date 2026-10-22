@@ -4,12 +4,6 @@ import { ColorSwatch, Group } from "@mantine/core";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
 
-interface Response {
-      expr: string;
-      result: string;
-      assign: boolean;
-}
-
 interface GeneratedResult {
       expression: string;
       answer: string;
@@ -20,8 +14,8 @@ export default function Home() {
       const [isDrawing, setIsDrawing] = useState(false);
       const [color, setColor] = useState("rgb(255, 255, 255)");
       const [reset, setReset] = useState(false);
-      const [results, setResults] = useState<GeneratedResult>();
-      const [dictOfVars, setDictOfVars] = useState({});
+      const [, setResults] = useState<GeneratedResult>();
+      const [dictOfVars] = useState({});
 
       // Reset the canvas when the reset state changes
       useEffect(() => {
