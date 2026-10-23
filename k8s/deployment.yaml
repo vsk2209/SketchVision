@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sketchvision
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sketchvision
+  template:
+    metadata:
+      labels:
+        app: sketchvision
+    spec:
+      containers:
+        - name: web
+          image: vaishnavi036/sketchvision:v1
+          ports:
+            - containerPort: 80
