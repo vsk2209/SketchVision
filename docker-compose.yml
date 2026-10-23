@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        VITE_API_URL: http://localhost:8000
+    image: sketchvision:compose
+    container_name: sketchvision
+    ports:
+      - "8080:80"
+    restart: unless-stopped
