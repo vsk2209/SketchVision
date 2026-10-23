@@ -48,3 +48,17 @@ export default tseslint.config({
   },
 })
 ```
+
+## Run with Docker
+
+```bash
+docker run -p 8080:80 vaishnavi036/sketchvision:v1
+```
+
+Or build locally with compose:
+
+```bash
+docker compose up --build
+```
+
+Open http://localhost:8080
